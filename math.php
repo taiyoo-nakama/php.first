@@ -84,13 +84,23 @@ $subjects_score = array(
 $subjects_score['history'] = 80;
 unset($subjects_score['science']);
 
-var_dump($subjects_score);
+far_dump($subjects_score);
 echo "\n";
 
 try{
   undefinedFunction();
 }catch(\Throwable $th){
-  echo 'catch'."\n";
+  echo 'catch'
+  echo "\n";
 }finally{
   echo "この行は実行されます";
+}
+
+
+try{
+  throw new Exception('例外に投げます');
+}catch(Exception $e){
+  echo $e->getMessage();
+}finally{
+  echo "この行は実行されます" . "\n";
 }
